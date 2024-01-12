@@ -12,7 +12,7 @@ const Experience = () => {
       <section className='bg-secondry w-full p-3 lg:p-5 rounded-2xl'>
         <div className='flex justify-evenly'>
           <div className="company-logo w-[10%] rounded-full justify-between ">
-            <img src="https://media.licdn.com/dms/image/D4D0BAQHT0m7QR6qURg/company-logo_100_100/0/1695289577650?e=1713398400&v=beta&t=sPy8wEX_YEHBR4cB9wBSqKSs6KINoHYsXAtUX4N61zo" alt="" className='w-full rounded-full transform scale-75' />
+            <Image src="https://media.licdn.com/dms/image/D4D0BAQHT0m7QR6qURg/company-logo_100_100/0/1695289577650?e=1713398400&v=beta&t=sPy8wEX_YEHBR4cB9wBSqKSs6KINoHYsXAtUX4N61zo" alt="" className='w-full rounded-full transform scale-75' />
           </div>
           <div className="content w-[85%]">
             <h2 className='text-base lg:text-xl text-zinc-100'>React Developer</h2>
