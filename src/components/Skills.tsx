@@ -125,11 +125,11 @@ const skillsData = [
 ]
 const Skills = () => {
   return (
-    <div className='my-10'>
+    <div className='my-10' id='skills'>
       <h2 className='text-2xl my-10 text-zinc-200'>What I Know</h2>
-      <div className='flex w-full justify-evenly '>
+      <div className='flex flex-wrap lg:flex-nowrap lg:gap-0 gap-5 w-full justify-evenly '>
         {skillsData.map((item) => (
-          <div key={item.title} className={`bg-secondry min-h-[200px]  cursor-pointer p-5 rounded-2xl hover:shadow-zinc-500 hover:shadow-lg duration-300 hover:scale-105 ${item.title == "Frontend" ? "w-[30%]" : "w-[22%]"}`}>
+          <div key={item.title} className={`bg-secondry min-h-[200px]  cursor-pointer p-5 rounded-2xl hover:shadow-zinc-500 hover:shadow-lg duration-300 hover:scale-105 ${item.title == "Frontend" ? "w-[80%] lg:w-[30%]" : "w-[80%] lg:w-[22%]"}`}>
             <h2 className='text-xl mb-4 text-primary text-center'>{item.title}</h2>
             <div className='flex flex-wrap gap-3 justify-evenly'>
               {

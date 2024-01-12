@@ -30,13 +30,12 @@ body {
   animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .fade-out{
-  animation: fade-out 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   display: none;
 }
 .exp-card:hover .exp-overlay{
   display: flex;
   height: 100%;
-  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-card 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* .exp-card:hover .exp-overlay {
@@ -47,15 +46,15 @@ body {
     opacity: 0;
   }
   to {
-    opacity: 0.9;
-  }
-}
-@keyframes fade-out {
-  from {
     opacity: 1;
   }
-  to {
+}
+@keyframes fade-in-card {
+  from {
     opacity: 0;
+  }
+  to {
+    opacity: 0.9;
   }
 }
 
@@ -66,4 +65,7 @@ body {
 }
 .main-container:hover .show-overlay {
   height: 100%;
+}
+.main-container:hover .show-overlay a{
+  display: block;
 }
