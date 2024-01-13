@@ -104,7 +104,7 @@ export default ContactModal
 function MyInput({ label, ...props }: any) {
   return (
     <div className="mb-4">
-      <label className="mb-2.5 block text-black text-xs lg:text-base dark:text-white">
+      <label className="mb-2.5 block text-white text-xs lg:text-base">
         {label}
       </label>
       <input
