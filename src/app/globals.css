@@ -69,3 +69,31 @@ body {
 .main-container:hover .show-overlay a{
   display: block;
 }
+
+.hide-sidebar{
+  width: 0%;
+  transition: all 1s ease-in-out;
+  display: none;
+}
+.show-sidebar{
+  animation: show-sidebar 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes show-sidebar {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+    display: block;
+  }
+}
+@keyframes hide-sidebar {
+  0%{
+    width: 60%;
+  }
+  100%{
+    width: 0%;
+    display: none;
+  }
+}

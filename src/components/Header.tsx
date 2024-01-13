@@ -1,12 +1,24 @@
 "use client"
 import React, { useState } from 'react'
 import ContactModal from './ContactModal'
-const Header = () => {
-  const [showContact , setShowContact] = useState(false)
+
+type Props = {
+  setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
+}
+const Header = ({ setShowSidebar }: Props) => {
+  const [showContact, setShowContact] = useState(false)
+  function openNavbar() {
+    window.scroll(0,0)
+    setShowSidebar(true)
+  }
   return (
     <>
       <nav className='flex w-full justify-between h-full'>
-        <div className="left w-[20%] flex ml-5 items-center gap-2">
+        <div onClick={openNavbar } className="left cursor-pointer lg:hidden w-[20%] flex ml-5 items-center gap-2">
+          <div className='h-4 w-4 bg-green-400 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+          <div className='h-4 w-4 bg-green-400 rounded-full animate-bounce [animation-delay:-0.15s]'></div>
+        </div>
+        <div className="left hidden w-[20%] lg:flex ml-5 items-center gap-2">
           <div className='h-4 w-4 bg-green-400 rounded-full animate-bounce [animation-delay:-0.3s]'></div>
           <div className='h-4 w-4 bg-green-400 rounded-full animate-bounce [animation-delay:-0.15s]'></div>
         </div>
@@ -23,7 +35,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <ContactModal showContact={showContact} setShowContact={setShowContact}/>
+      <ContactModal showContact={showContact} setShowContact={setShowContact} />
     </>
 
   )

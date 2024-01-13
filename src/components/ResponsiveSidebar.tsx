@@ -1,4 +1,5 @@
 import React from 'react'
+import { boolean } from 'yup'
 
 const sidebarItems = [
   {
@@ -55,9 +56,22 @@ const socialItems = [
   },
 ]
 
-const Sidebar = () => {
+type Props = {
+  showSidebar:boolean;
+  setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const ResponsiveSidebar = ({showSidebar,setShowSidebar}:Props) => {
   return (
-    <section className='bg-secondry p-2 text-primary h-[90%] rounded-xl'>
+    <section className={`bg-secondry p-2 text-primary h-screen ${showSidebar ? "show-sidebar":"hide-sidebar"}`} >
+      <div onClick={()=>setShowSidebar(false)} className="modal-close cursor-pointer z-50 flex items-center justify-end m-10 text-white gap-3">
+        <svg className="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+          viewBox="0 0 18 18">
+          <path
+            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+          </path>
+        </svg>
+      </div>
       {sidebarItems.map((item) => (
         <a key={item.name} className="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4" href={item.link}>
           {item.icon}
@@ -75,4 +89,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default ResponsiveSidebar

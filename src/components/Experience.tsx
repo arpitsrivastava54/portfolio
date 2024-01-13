@@ -42,7 +42,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <h2 className='my-5 border-b text-sm lg:text-base  inline-block px-1 pb-1'>My contributions to this company&apos;s work. =={">"}</h2>
+        <h2 className='my-5 border-b text-sm lg:text-base  inline-block px-1 pb-1'>Contribution in this company&apos;s work. =={">"}</h2>
 
         <div className="websites w-full my-5 flex gap-3 justify-evenly">
           {/* first websites */}
