@@ -88,7 +88,7 @@ const ContactModal = ({ showContact, setShowContact }: Props) => {
                 className="focus:outline-none modal-close px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">Cancel</button>
               <button
               type='submit'
-                className="focus:outline-none px-4 bg-teal-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">Confirm</button>
+                className="focus:outline-none px-4 bg-teal-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">Send Message</button>
             </div>
           </form>
         </div>

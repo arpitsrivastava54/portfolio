@@ -42,7 +42,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <h2 className='my-5 border-b inline-block px-1 pb-1'>Work In Websites in this Company =={">"}</h2>
+        <h2 className='my-5 border-b text-sm lg:text-base  inline-block px-1 pb-1'>My contributions to this company's work. =={">"}</h2>
 
         <div className="websites w-full my-5 flex gap-3 justify-evenly">
           {/* first websites */}
@@ -59,7 +59,7 @@ const Experience = () => {
 
           {/* second websites  */}
           <div className='w-1/3 lg:w-1/5'>
-          <p className='text-xs my-2 text-zinc-400 text-center'>CB Store Website</p>
+          <p className='text-xs my-2 text-zinc-400 text-center'>CB Store </p>
             <div className="exp-card w-full relative bg-white rounded-xl">
               <Image src={cbStoreImage} alt='' className='rounded-lg object-contain'/>
               <div className='exp-overlay justify-center items-center hidden w-full bg-black absolute top-0 hover:rounded-md z-55'>
