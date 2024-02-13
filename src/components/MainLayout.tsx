@@ -26,7 +26,7 @@ const MainLayout = ({ children }: ChildrenProps) => {
         <aside className='main-content relative left-0 lg:left-[20%] w-full p-5 lg:p-0 lg:w-[80%]'>{children}</aside>
       </section>
 
-      {showSidebar && <section onClick={() => setShowSidebar(false)} className='absolute top-0 z-[999] w-full h-screen'>
+      {showSidebar && <section onClick={() => setShowSidebar(false)} className='fixed top-0 z-[999] w-[70%] h-screen'>
        <ResponsiveSidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
       </section>}
     </main>
