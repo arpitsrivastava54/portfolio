@@ -63,7 +63,7 @@ type Props = {
 
 const ResponsiveSidebar = ({showSidebar,setShowSidebar}:Props) => {
   return (
-    <section className={`bg-secondry p-5 text-primary h-screen ${showSidebar ? "show-sidebar":"hide-sidebar"}`} >
+    <section className={`lg:hidden bg-secondry p-5 text-primary h-screen ${showSidebar ? "show-sidebar":"hide-sidebar"}`} >
       <div onClick={()=>setShowSidebar(false)} className="modal-close cursor-pointer z-50 flex items-center justify-end m-10 text-white gap-3">
         <svg className="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
           viewBox="0 0 18 18">
