@@ -19,7 +19,7 @@ const Experience = () => {
             <h2 className='text-base lg:text-xl text-zinc-100'>React Developer</h2>
             <p className='text-xs lg:text-sm text-zinc-200'>CareerBanao <span> . </span>Internship</p>
             <div className='text-zinc-400 text-xs lg:text-sm'>
-              <p>Nov 2023 - Present <span> . </span> 6 mos</p>
+              <p>Nov 2023 - Present <span> . </span> 7 mos</p>
               <p>Noida , Uttar Pradesh, India <span> . </span> Remote</p>
             </div>
             <br />
