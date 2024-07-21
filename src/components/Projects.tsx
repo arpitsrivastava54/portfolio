@@ -20,7 +20,7 @@ const projectData = [
     title: "Monkey (E-commerce)",
     description: "React.js , Redux Toolkit, SCSS , Express.js, Stripe, MongoDB, Firebase",
     website:"https://monkeycloth.vercel.app/",
-    github:"",
+    github:"https://github.com/arpitsrivastava54/portfolio",
   },
   {
     image: blogImg,
