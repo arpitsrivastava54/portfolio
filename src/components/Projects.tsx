@@ -16,19 +16,27 @@ const projectData = [
     github:"https://github.com/arpitsrivastava54/genius-saas",
   },
   {
+    image: ecommerceImg,
+    title: "Monkey (E-commerce)",
+    description: "React.js , Redux Toolkit, SCSS , Express.js, Stripe, MongoDB, Firebase",
+    website:"https://monkeycloth.vercel.app/",
+    github:"",
+  },
+  {
     image: blogImg,
     title: "Blog Website",
     description: "React.js , Redux Toolkit, Tailwind Css, MongoDB, Express.js",
     website:"https://as-blogify.netlify.app/",
     github:"https://github.com/arpitsrivastava54/blogify-frontend",
   },
-  {
-    image: ecommerceImg,
-    title: "E-commerce Clone",
-    description: "React.js , Redux Toolkit, SCSS",
-    website:"https://asecommerce.netlify.app/",
-    github:"",
-  },
+  // {
+  //   image: ecommerceImg,
+  //   title: "Monkey (E-commerce)",
+  //   description: "React.js , Redux Toolkit, SCSS , Express.js, Stripe, MongoDB, Firebase",
+  //   website:"https://asecommerce.netlify.app/",
+  //   github:"",
+  // },
+ 
   {
     image: googleImg,
     title: "Google Search Clone",

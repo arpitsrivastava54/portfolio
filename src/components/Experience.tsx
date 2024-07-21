@@ -75,7 +75,7 @@ const Experience = () => {
             <div className="exp-card w-full relative bg-white rounded-xl">
               <Image src={cbAdminImage} alt='' className='rounded-lg object-contain'/>
               <div className='exp-overlay justify-center items-center hidden w-full bg-black absolute top-0 hover:rounded-md z-55'>
-                <a  className='border font-bold text-xs p-2 lg:px-5 lg:py-2 rounded-3xl'>Working..</a>
+                <a href='https://cbadmin.careerbanao.in' target='_blank' className='border font-bold text-xs p-2 lg:px-5 lg:py-2 rounded-3xl'>Visit site</a>
               </div>
             </div>
             <p className='text-xs my-2 text-zinc-400 text-center'>Contribution in all pages</p>
