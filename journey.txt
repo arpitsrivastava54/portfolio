@@ -1,0 +1,38 @@
+# College Projects 
+
+projects work (2023-2024): 
+ - ecommerce website : monkeycloth.vercel.app(used canvas for take your customize t-shirt print)
+ - blog website : https://as-blogify.netlify.app
+
+
+# Freelance Projects
+ project :
+  - personal landing page for lic agent : https://pralaylic.in
+
+# Work Experience in CareerBanao
+Frontend Engineer(Intern) March 2024 - August 2024:
+  projects work : 
+    - CareerBanao Main Website
+    - CareerBanao Admin Dashboard
+    - Cb.store (for selling courses)
+
+# Work Experience in Mithilastack
+Frontend Engineer(Intern) August 2024 - December 2025 : 
+ projects work : 
+  - dconnec
+
+Full Stack Engineer(Remote Engineer Full time) January 2025 - March 2025 : 
+ projects work : 
+  - Rising Bihar
+
+
+Lead Full Stack Engineer & Ai & Genai(Remote Engineer Full time) April 2025 - Present : 
+ projects work : 
+  - ExamGrader.ai
+  - Nivyasa.ai
+  - Ai-Clinic
+  - Neurik
+
+
+
+

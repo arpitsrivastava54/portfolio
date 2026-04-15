@@ -1,0 +1,45 @@
+Arpit Srivastava
+Full Stack Engineer  |  AI & GenAI
+Email:arpitsrivastava54@gmail.com  •  LinkedIn •  Github
+
+
+PROFESSIONAL SUMMARY
+Full Stack Engineer with 2 years of hands-on experience building production-grade web applications, AI-powered platforms, and scalable backend systems. Skilled in Next.js, React, Node.js, Fastify, and MongoDB, with deep practical exposure to Generative AI, LLM integrations, real-time systems, and enterprise-scale infrastructure. Experienced in designing end-to-end systems from RBAC dashboards to queue-driven backends and WebSocket-powered real-time features.
+WORK EXPERIENCE
+
+MithilaStack
+Full Stack Engineer  —  Remote (August 2024 - Present)
+
+
+
+
+ExamGrader.ai   |   Lead Full-Stack & AI Engineer
+
+
+
+AI-powered academic evaluation SaaS serving 5,000+ educators — automates grading of subjective, handwritten, and MCQ assessments using a Vision LLM.
+Built a context-aware neural grading engine achieving 95%+ accuracy on subjective and free-response questions, going beyond keyword matching to evaluate student reasoning and logic.
+Engineered a high-speed OCR pipeline converting scanned PDFs and handwritten answer sheets into machine-readable text for instant AI analysis.
+Developed 6 proprietary evaluation engines supporting QPA (Question Paper with Answers), QPM (MCQ), and AFR (Free Response Answer) assessment formats.
+Designed a parallel-processing backend using Bull queues and worker threads to handle bulk institutional uploads with millisecond latency at scale.
+
+Neurik — AI Call Agent Platform   |   Lead Full-Stack & AIEngineer
+
+
+
+Business automation platform combining AI voice agents with a full CRM-style lead management system to scale B2B/B2C sales and support operations.
+Architected a multi-tenant AI CRM platform with a backend orchestration layer and LiveKit-based Python agent runtime for scalable voice automation.
+Built real-time AI voice calling workflows (outbound/inbound) with transcript capture, call summaries, and human handoff support for lead qualification and initial engagement.
+Designed a modular knowledge-ingestion pipeline that processes website and PDF business data into structured, searchable context for more accurate agent responses.
+Implemented asynchronous, queue-driven processing (BullMQ + Redis) with worker-based validation/retries to improve reliability of long-running ingestion and call workflows.
+Integrated vector retrieval (Azure OpenAI embeddings + Qdrant) with source-level traceability and cleanup workflows to scale knowledge-backed AI responses.
+
+Nivyasa.ai  |   Backend Engineer
+
+
+
+AI-powered social content automation platform with subscription-led workflows, approval pipelines, and admin governance.
+Built and shipped secure authentication infrastructure with LinkedIn OAuth 2.0, JWT access/refresh tokens, protected routes, and user identity lifecycle handling.
+Implemented Razorpay-integrated payment system supporting both Auto Pay recurring subscriptions and one-time add-on credit purchases via subscriptions/orders APIs.
+Built an end-to-end content operations pipeline covering AI post generation, scheduled publishing windows, approval orchestration, and final publish handoff, with auto-approval fallback and asynchronous workers for reliable throughput.
+Integrated WhatsApp-based approval notifications and background workers for asynchronous approval orchestration and publishing queue handoff..
