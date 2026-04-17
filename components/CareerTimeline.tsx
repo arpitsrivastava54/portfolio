@@ -26,6 +26,12 @@ const lineColors: Record<string, string> = {
   'College Projects': 'from-purple-400/60 to-purple-400/10',
 };
 
+const workTypeColors: Record<JourneyEntry['workType'], string> = {
+  Remote: 'bg-cyan-500/20 border-cyan-400/60 text-cyan-300',
+  Onsite: 'bg-orange-500/20 border-orange-400/60 text-orange-300',
+  Hybrid: 'bg-violet-500/20 border-violet-400/60 text-violet-300',
+};
+
 function TypeIcon({ type }: { type: JourneyEntry['type'] }) {
   if (type === 'college') return <GraduationCap size={14} />;
   if (type === 'freelance') return <Code2 size={14} />;
@@ -34,16 +40,16 @@ function TypeIcon({ type }: { type: JourneyEntry['type'] }) {
 
 function ProjectChip({ project }: { project: { title: string; experienceId?: string; url?: string; tags: string[] } }) {
   const base =
-    'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono font-medium border transition-all duration-200';
+    'inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-mono font-semibold transition-all duration-200';
 
   if (project.experienceId) {
     return (
       <Link
         href={`/experience/${project.experienceId}`}
-        className={`${base} bg-bg-primary border-border-secondary text-text-secondary hover:border-accent-primary/50 hover:text-accent-primary hover:bg-accent-primary/5 group`}
+        className={`${base} bg-bg-tertiary/90 border-border-primary text-text-primary shadow-sm hover:bg-bg-tertiary hover:border-border-primary/80 group`}
       >
         {project.title}
-        <ArrowUpRight size={11} className="opacity-50 group-hover:opacity-100 transition-opacity" />
+        <ArrowUpRight size={11} className="opacity-60 group-hover:opacity-100 transition-opacity" />
       </Link>
     );
   }
@@ -54,16 +60,16 @@ function ProjectChip({ project }: { project: { title: string; experienceId?: str
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${base} bg-bg-primary border-border-secondary text-text-secondary hover:border-border-primary hover:text-text-primary group`}
+        className={`${base} bg-bg-tertiary/90 border-border-primary text-text-primary shadow-sm hover:bg-bg-tertiary hover:border-border-primary/80 group`}
       >
         {project.title}
-        <ExternalLink size={11} className="opacity-40 group-hover:opacity-80 transition-opacity" />
+        <ExternalLink size={11} className="opacity-60 group-hover:opacity-90 transition-opacity" />
       </Link>
     );
   }
 
   return (
-    <span className={`${base} bg-bg-primary border-border-secondary text-text-tertiary cursor-default`}>
+    <span className={`${base} bg-bg-tertiary/90 border-border-primary text-text-primary shadow-sm cursor-default`}>
       {project.title}
     </span>
   );
@@ -92,6 +98,7 @@ export function CareerTimeline() {
         const dotColor = dotColors[entry.company] ?? 'bg-text-tertiary shadow-text-tertiary/20';
         const lineColor = lineColors[entry.company] ?? 'from-text-tertiary/40 to-transparent';
         const chipColor = companyColors[entry.company] ?? 'bg-bg-tertiary border-border-secondary text-text-secondary';
+        const workTypeColor = workTypeColors[entry.workType];
         const isLast = entryIdx === journey.length - 1;
 
         return (
@@ -115,6 +122,11 @@ export function CareerTimeline() {
                 >
                   <TypeIcon type={entry.type} />
                   {entry.company}
+                </span>
+                <span
+                  className={`rounded-full border px-2 py-0.5 text-[9px] font-bold tracking-wide uppercase ${workTypeColor}`}
+                >
+                  {entry.workType}
                 </span>
                 <span className="text-text-tertiary font-mono text-xs">{entry.overallPeriod}</span>
               </div>
@@ -149,7 +161,7 @@ export function CareerTimeline() {
                         .map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-0.5 text-[10px] font-mono text-text-tertiary bg-bg-secondary border border-border-secondary rounded"
+                            className="rounded border border-border-primary bg-bg-tertiary/90 px-2 py-0.5 text-[10px] font-mono font-medium text-text-secondary shadow-sm"
                           >
                             {tag}
                           </span>

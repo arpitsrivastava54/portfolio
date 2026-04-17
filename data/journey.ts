@@ -16,6 +16,7 @@ export interface JourneyEntry {
   company: string;
   overallPeriod: string;
   type: 'work' | 'freelance' | 'college';
+  workType: 'Remote' | 'Onsite' | 'Hybrid';
   roles: JourneyRole[];
 }
 
@@ -25,6 +26,7 @@ export const journey: JourneyEntry[] = [
     company: 'MithilaStack',
     overallPeriod: 'August 2024 – Present',
     type: 'work',
+    workType:"Remote",
     roles: [
       {
         role: 'Lead Full Stack & AI Engineer',
@@ -81,6 +83,7 @@ export const journey: JourneyEntry[] = [
     company: 'CareerBanao',
     overallPeriod: 'March 2024 – August 2024',
     type: 'work',
+    workType: 'Remote',
     roles: [
       {
         role: 'Frontend Engineer (Intern)',
@@ -107,6 +110,7 @@ export const journey: JourneyEntry[] = [
     company: 'Freelance',
     overallPeriod: '2024',
     type: 'freelance',
+    workType: 'Remote',
     roles: [
       {
         role: 'Frontend Developer',
@@ -126,6 +130,7 @@ export const journey: JourneyEntry[] = [
     company: 'College Projects',
     overallPeriod: '2023 – 2024',
     type: 'college',
+    workType: 'Onsite',
     roles: [
       {
         role: 'Full Stack Developer',

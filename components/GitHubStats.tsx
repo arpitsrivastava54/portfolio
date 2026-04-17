@@ -22,6 +22,12 @@ interface StatPill {
 export function GitHubStats() {
   const [userData, setUserData] = useState<GitHubUser | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isClient , setIsClient] = useState(false);
+
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 2023 + 1 }, (_, i) => currentYear - i);
@@ -52,6 +58,18 @@ export function GitHubStats() {
     { icon: Flame, label: 'Longest Streak', value: userData ? '42 Days' : '—' },
     { icon: Flame, label: 'Current Streak', value: userData ? '5 Days' : '—' },
   ];
+
+  if(!isClient) {
+    return (
+      <div className="space-y-12 relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 sm:px-0">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="w-full h-20 bg-bg-secondary/20 border border-border-primary rounded-2xl animate-pulse" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <motion.div

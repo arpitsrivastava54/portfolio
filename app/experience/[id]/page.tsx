@@ -2,7 +2,7 @@
 
 import { use } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, Rocket, Target, Lightbulb } from 'lucide-react';
+import { ChevronLeft, Rocket, Target, Lightbulb, ExternalLink, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { experiences } from '@/data/experiences';
 import { profile } from '@/data/profile';
@@ -14,6 +14,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   const { id } = use(params);
   const currentIndex = experiences.findIndex((p) => p.id === id);
   const project = experiences[currentIndex];
+  console.log(project);
 
   if (!project) {
     notFound();
@@ -62,6 +63,28 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
               <p className="text-xl text-text-secondary max-w-3xl leading-relaxed">
                 {project.description}
               </p>
+              <div className="pt-2">
+                {project.url ? (
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-accent-primary px-4 py-2.5 text-sm font-bold text-bg-primary transition-opacity hover:opacity-90"
+                  >
+                    Visit Website
+                    <ExternalLink size={15} />
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    disabled
+                    className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border-primary bg-bg-tertiary px-4 py-2.5 text-sm font-medium text-text-tertiary"
+                  >
+                    Website Unavailable
+                    <Lock size={14} className="opacity-70" />
+                  </button>
+                )}
+              </div>
             </motion.div>
           </div>
         </section>

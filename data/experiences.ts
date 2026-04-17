@@ -80,6 +80,8 @@ gradingQueue.process(async (job) => {
       'Queue-based architectures handle variable institutional upload patterns far more gracefully than synchronous request-response cycles.',
       'OCR accuracy depends heavily on preprocessing steps to normalise handwriting variations before feeding into the vision model.',
     ],
+    url: 'https://examgrader.ai',
+    image:"/projects/examgrader.png",
   },
   {
     id: 'neurik',
@@ -137,6 +139,8 @@ gradingQueue.process(async (job) => {
       'Multi-tenant CRMs need strict data isolation through organizational scoping at the query level, not just at the API layer.',
       'Vector retrieval with source-level traceability significantly improves AI response trustworthiness in enterprise deployments.',
     ],
+    url: 'https://neurik.mindspirit.in',
+    image:"/projects/neurik.png",
   },
   {
     id: 'ai-clinic',
@@ -188,6 +192,8 @@ gradingQueue.process(async (job) => {
       'Embedding medical documents at a finer granularity (section-level vs document-level) dramatically improves retrieval precision for clinical queries.',
       'A "build once, deploy anywhere" agent factory pattern significantly reduces time-to-deployment for new healthcare provider onboarding.',
     ],
+    url:"https://ai-clinic.tech",
+    image:"/projects/ai-clinic.png",
   },
   {
     id: 'nivyasa',
@@ -246,6 +252,8 @@ app.post('/webhooks/razorpay', async (req, res) => {
       'OAuth 2.0 flows require robust state-parameter handling to prevent CSRF attacks during the LinkedIn authorization redirect.',
       'Asynchronous worker patterns with dead-letter queues ensure high throughput for background operations like WhatsApp approval notifications.',
     ],
+    url:"https://nivyasa.ai",
+    image:"/projects/nivyasa.png",
   },
   {
     id: 'dconnec',
@@ -299,6 +307,8 @@ const usePermissions = (userRole: UserRole) => {
       'Real-time ticket systems require optimistic UI updates paired with server reconciliation to avoid perceived latency in high-volume NOC environments.',
       'Multi-country billing UI needs abstraction layers that decouple currency formatting, tax logic, and contract templates from rendering components.',
     ],
+    url:"https://www.dconnec.com",
+    image:"/projects/dconnec.png",
   },
   {
     id: 'rising-bihar',
@@ -358,6 +368,8 @@ const usePermissions = (userRole: UserRole) => {
       'Google Meet API spaces must be created with correct access type upfront — modifying access controls post-creation causes participant confusion during live sessions.',
       'Tri-panel RBAC architectures benefit from a centralized permission resolver that all three panels reference, rather than per-panel role logic.',
     ],
+    url:"https://risingbihar.org",
+    image:"/projects/rising-bihar.png",
   },
 
   // ── CareerBanao ────────────────────────────────────────────────────────────
@@ -389,6 +401,8 @@ const usePermissions = (userRole: UserRole) => {
       'Conversion-focused landing pages require iterative design with real user feedback — static assumptions rarely hold.',
       'Consistent design tokens across a team codebase reduce design drift significantly over multiple sprints.',
     ],
+    url:"https://careerbanao.org",
+    image:"/projects/careerbanao.png",
   },
   {
     id: 'careerbanao-admin',
@@ -479,6 +493,7 @@ const usePermissions = (userRole: UserRole) => {
       'Freelance clients value clear visual hierarchy and mobile-first design above all else — aesthetics matter more than technical complexity for trust-building.',
       'WhatsApp CTAs outperform email forms for local service businesses in terms of direct lead conversion.',
     ],
+    image:"/projects/pralaylic.png",
   },
 
   // ── College Projects ───────────────────────────────────────────────────────
@@ -511,35 +526,6 @@ const usePermissions = (userRole: UserRole) => {
       'Canvas API requires careful state management for undo/redo — immutable layer snapshots are far more reliable than mutable canvas mutations.',
       'Real-time preview performance depends heavily on debouncing user input before redrawing the canvas on each interaction.',
     ],
-  },
-  {
-    id: 'blogify',
-    title: 'Blogify',
-    role: 'Full Stack Developer',
-    period: '2023 – 2024',
-    company: 'College Projects',
-    shortDescription: 'Blog platform • CRUD • Auth • Markdown editor',
-    description:
-      'Full-stack blog platform where users can sign up, create and publish posts with a Markdown editor, browse other writers\' content, and manage their own articles — built as a college learning project.',
-    challenge:
-      'Learning full-stack development end-to-end: building an authenticated REST API, a relational data model for posts and users, and a responsive frontend — all from scratch.',
-    solution:
-      'Built a Node.js + Express REST API with JWT authentication and MongoDB for persistence. Built the React frontend with a Markdown editor, post listing, and profile pages.',
-    impact: [
-      'Full-stack blog platform with authentication and CRUD',
-      'Markdown editor with live preview for post creation',
-      'User profile pages with published post history',
-    ],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Markdown', 'REST API'],
-    url: 'https://as-blogify.netlify.app',
-    metrics: [
-      { label: 'Auth Flow', value: 'JWT', end: 1 },
-      { label: 'API Routes', value: '15+', end: 15, suffix: '+' },
-      { label: 'Stack', value: 'Full Stack', end: 2 },
-    ],
-    learnings: [
-      'JWT refresh token rotation is critical for production auth — access token expiry without refresh creates poor UX that erodes trust.',
-      'Building a real project end-to-end, even a simple blog, teaches more about system design than any tutorial.',
-    ],
+    image:"/projects/monkey-cloth.png",
   },
 ];
