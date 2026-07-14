@@ -37,11 +37,11 @@ export const journey: JourneyEntry[] = [
             experienceId: 'examgrader',
             tags: ['Next.js', 'Vision LLM', 'Bull Queues', 'OCR'],
           },
-          {
-            title: 'Neurik',
-            experienceId: 'neurik',
-            tags: ['LiveKit', 'Python', 'Azure OpenAI', 'BullMQ'],
-          },
+          // {
+          //   title: 'Neurik',
+          //   experienceId: 'neurik',
+          //   tags: ['LiveKit', 'Python', 'Azure OpenAI', 'BullMQ'],
+          // },
           {
             title: 'AI Clinic',
             experienceId: 'ai-clinic',

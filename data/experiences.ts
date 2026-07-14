@@ -83,65 +83,65 @@ gradingQueue.process(async (job) => {
     url: 'https://examgrader.ai',
     image:"/projects/examgrader.png",
   },
-  {
-    id: 'neurik',
-    title: 'Neurik',
-    role: 'Lead Full-Stack & AI Engineer',
-    period: '2024 - Present',
-    company: 'MithilaStack',
-    shortDescription: 'AI voice agents • LiveKit • Multi-tenant CRM',
-    description:
-      'Business automation platform combining AI voice agents with a full CRM-style lead management system to scale B2B/B2C sales and support operations — enabling real-time outbound/inbound calling with transcript capture, call summaries, and human handoff.',
-    challenge:
-      'Businesses struggle to handle high-volume lead qualification and support calls with human agents, leading to slow response times, inconsistent follow-ups, and missed conversion opportunities.',
-    solution:
-      'Architected a multi-tenant AI CRM platform with a LiveKit-based Python agent runtime for scalable voice automation, built a modular knowledge-ingestion pipeline processing website and PDF data into structured context, and implemented BullMQ + Redis queue-driven processing for long-running ingestion and call workflows.',
-    impact: [
-      'Multi-tenant Voice CRM',
-      'Real-time AI Call Handling',
-      'Vector-backed Knowledge Retrieval',
-    ],
-    tech: ['Python', 'LiveKit', 'Azure OpenAI', 'Qdrant', 'BullMQ', 'Redis', 'Fastify', 'Node.js'],
-    metrics: [
-      { label: 'Call Response Latency', value: '<2s', end: 2, suffix: 's' },
-      { label: 'Transcript Accuracy', value: '98%', end: 98, suffix: '%' },
-      { label: 'Concurrent Calls', value: '100+', end: 100, suffix: '+' },
-    ],
-    codeSnippet: {
-      title: 'LiveKit AI voice agent with vector-backed context retrieval',
-      language: 'python',
-      code: `class VoiceAgent:
-    def __init__(self, room_name: str, knowledge_base: VectorStore):
-        self.room = LiveKitRoom(room_name)
-        self.kb = knowledge_base
-        self.llm = AzureOpenAI()
+  // {
+  //   id: 'neurik',
+  //   title: 'Neurik',
+  //   role: 'Lead Full-Stack & AI Engineer',
+  //   period: '2024 - Present',
+  //   company: 'MithilaStack',
+  //   shortDescription: 'AI voice agents • LiveKit • Multi-tenant CRM',
+  //   description:
+  //     'Business automation platform combining AI voice agents with a full CRM-style lead management system to scale B2B/B2C sales and support operations — enabling real-time outbound/inbound calling with transcript capture, call summaries, and human handoff.',
+  //   challenge:
+  //     'Businesses struggle to handle high-volume lead qualification and support calls with human agents, leading to slow response times, inconsistent follow-ups, and missed conversion opportunities.',
+  //   solution:
+  //     'Architected a multi-tenant AI CRM platform with a LiveKit-based Python agent runtime for scalable voice automation, built a modular knowledge-ingestion pipeline processing website and PDF data into structured context, and implemented BullMQ + Redis queue-driven processing for long-running ingestion and call workflows.',
+  //   impact: [
+  //     'Multi-tenant Voice CRM',
+  //     'Real-time AI Call Handling',
+  //     'Vector-backed Knowledge Retrieval',
+  //   ],
+  //   tech: ['Python', 'LiveKit', 'Azure OpenAI', 'Qdrant', 'BullMQ', 'Redis', 'Fastify', 'Node.js'],
+  //   metrics: [
+  //     { label: 'Call Response Latency', value: '<2s', end: 2, suffix: 's' },
+  //     { label: 'Transcript Accuracy', value: '98%', end: 98, suffix: '%' },
+  //     { label: 'Concurrent Calls', value: '100+', end: 100, suffix: '+' },
+  //   ],
+  //   codeSnippet: {
+  //     title: 'LiveKit AI voice agent with vector-backed context retrieval',
+  //     language: 'python',
+  //     code: `class VoiceAgent:
+  //   def __init__(self, room_name: str, knowledge_base: VectorStore):
+  //       self.room = LiveKitRoom(room_name)
+  //       self.kb = knowledge_base
+  //       self.llm = AzureOpenAI()
 
-    async def handle_call(self, audio_stream):
-        # Transcribe incoming audio
-        transcript = await self.transcribe(audio_stream)
+  //   async def handle_call(self, audio_stream):
+  //       # Transcribe incoming audio
+  //       transcript = await self.transcribe(audio_stream)
 
-        # Retrieve relevant business context from vector store
-        context = await self.kb.search(transcript, top_k=3)
+  //       # Retrieve relevant business context from vector store
+  //       context = await self.kb.search(transcript, top_k=3)
 
-        # Generate a grounded, context-aware response
-        response = await self.llm.chat(
-            messages=[
-                {"role": "system", "content": context},
-                {"role": "user", "content": transcript}
-            ]
-        )
+  //       # Generate a grounded, context-aware response
+  //       response = await self.llm.chat(
+  //           messages=[
+  //               {"role": "system", "content": context},
+  //               {"role": "user", "content": transcript}
+  //           ]
+  //       )
 
-        # Synthesize and stream TTS response back to caller
-        await self.tts_stream(response)`,
-    },
-    learnings: [
-      'Low-latency voice interactions require a Python/C++ agent runtime — Node.js event-loop latency is too inconsistent for real-time audio pipelines.',
-      'Multi-tenant CRMs need strict data isolation through organizational scoping at the query level, not just at the API layer.',
-      'Vector retrieval with source-level traceability significantly improves AI response trustworthiness in enterprise deployments.',
-    ],
-    url: 'https://neurik.mindspirit.in',
-    image:"/projects/neurik.png",
-  },
+  //       # Synthesize and stream TTS response back to caller
+  //       await self.tts_stream(response)`,
+  //   },
+  //   learnings: [
+  //     'Low-latency voice interactions require a Python/C++ agent runtime — Node.js event-loop latency is too inconsistent for real-time audio pipelines.',
+  //     'Multi-tenant CRMs need strict data isolation through organizational scoping at the query level, not just at the API layer.',
+  //     'Vector retrieval with source-level traceability significantly improves AI response trustworthiness in enterprise deployments.',
+  //   ],
+  //   url: 'https://neurik.mindspirit.in',
+  //   image:"/projects/neurik.png",
+  // },
   {
     id: 'ai-clinic',
     title: 'AI Clinic',
