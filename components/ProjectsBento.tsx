@@ -57,7 +57,11 @@ export function ProjectsBento() {
                     {/* 1. Image Placeholder Block */}
                     <div className="relative z-10 h-56 w-full overflow-hidden border-b border-border-primary bg-bg-primary">
                       {p.image ? (
-                        <img src={p.image} alt={p.title} className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                        <img
+                          src={p.image}
+                          alt={`${p.title} — ${p.tech.slice(0, 3).join(", ")} project by Arpit Srivastava`}
+                          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                        />
                       ) : (
                          <div className="w-full h-full flex items-center justify-center bg-[radial-gradient(#818cf8_1px,transparent_1px)] bg-size-[20px_20px] opacity-30 group-hover:opacity-50 transition-all duration-700 mix-blend-screen bg-bg-secondary/50">
                            <span className="font-extrabold text-4xl tracking-tighter uppercase font-mono text-text-secondary opacity-30 select-none group-hover:scale-110 transition-transform duration-700 drop-shadow-2xl">{p.title}</span>
@@ -104,7 +108,11 @@ export function ProjectsBento() {
                     {/* 1. Image Placeholder Block */}
                     <div className="relative z-10 h-56 w-full overflow-hidden border-b border-border-primary bg-bg-primary">
                       {p.image ? (
-                        <img src={p.image} alt={p.title} className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                        <img
+                          src={p.image}
+                          alt={`${p.title} — ${p.tech.slice(0, 3).join(", ")} project by Arpit Srivastava`}
+                          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                        />
                       ) : (
                          <div className="w-full h-full flex items-center justify-center bg-[radial-gradient(#818cf8_1px,transparent_1px)] bg-size-[20px_20px] opacity-30 group-hover:opacity-50 transition-all duration-700 mix-blend-screen bg-bg-secondary/50">
                            <span className="font-extrabold text-4xl tracking-tighter uppercase font-mono text-text-secondary opacity-30 select-none group-hover:scale-110 transition-transform duration-700 drop-shadow-2xl">{p.title}</span>

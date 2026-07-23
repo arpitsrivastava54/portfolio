@@ -1,28 +1,48 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Geist } from "next/font/google";
+import { JetBrains_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import {
+  defaultDescription,
+  defaultTitle,
+  getSiteUrl,
+  siteKeywords,
+} from "@/lib/site";
+import { profile } from "@/data/profile";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "Arpit Srivastava | Full Stack Engineer & AI Specialist",
-  description: "Building production AI platforms that scale. Specialized in LLMs, Generative AI, and Scalable Backend Systems.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultTitle,
+    template: "%s | Arpit Srivastava",
+  },
+  description: defaultDescription,
+  keywords: [...siteKeywords],
+  authors: [{ name: profile.name, url: siteUrl }],
+  creator: profile.name,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Arpit Srivastava | Full Stack Engineer & AI Specialist",
-    description: "Building production AI platforms that scale.",
-    url: "https://arpitsrivastava.dev",
-    siteName: "Arpit Srivastava Portfolio",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName: `${profile.name} Portfolio`,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
+        alt: `${profile.name} — Software Engineer & Full Stack Developer`,
       },
     ],
     locale: "en_US",
@@ -30,10 +50,65 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arpit Srivastava | Full Stack Engineer & AI Specialist",
-    description: "Building production AI platforms that scale.",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
+
+function JsonLd() {
+  const personId = `${siteUrl}/#person`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": personId,
+        name: profile.name,
+        url: siteUrl,
+        email: profile.email,
+        jobTitle: "Software Engineer / Full Stack Developer",
+        worksFor: {
+          "@type": "Organization",
+          name: profile.company,
+        },
+        sameAs: [profile.github, profile.linkedin],
+        knowsAbout: [
+          "Software Engineering",
+          "Full Stack Development",
+          "React",
+          "Next.js",
+          "Node.js",
+          "JavaScript",
+          "Python",
+          "Generative AI",
+          "LLMs",
+        ],
+        description: profile.summary,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: `${profile.name} Portfolio`,
+        description: defaultDescription,
+        author: { "@id": personId },
+        inLanguage: "en-US",
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
 
 export default function RootLayout({
   children,
@@ -43,9 +118,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", "dark", jetbrainsMono.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        "dark",
+        jetbrainsMono.variable,
+        "font-sans",
+        geist.variable
+      )}
     >
       <body className="min-h-full flex flex-col bg-bg-primary text-text-primary">
+        <JsonLd />
         {children}
       </body>
     </html>

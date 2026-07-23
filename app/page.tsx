@@ -18,7 +18,37 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-
+        {/* About — crawlable keyword-rich bio */}
+        <section
+          id="about"
+          aria-labelledby="about-heading"
+          className="py-20 border-t border-border-primary bg-bg-primary"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl"
+            >
+              <h2
+                id="about-heading"
+                className="text-3xl md:text-4xl font-bold tracking-tight font-mono mb-6"
+              >
+                // About Me
+              </h2>
+              <p className="text-text-secondary text-base md:text-lg leading-relaxed mb-4">
+                {profile.summary}
+              </p>
+              <p className="text-text-secondary text-base leading-relaxed">
+                As a software developer and full stack engineer, I ship production
+                systems with React and Next.js on the frontend, Node.js backends,
+                and Python for AI and data workflows — from RBAC dashboards to
+                queue-driven services and real-time features.
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Tech Ecosystem */}
         <section id="stack" className="py-24 relative overflow-hidden bg-bg-secondary/20 border-y border-border-primary">

@@ -9,7 +9,7 @@ export const profile = {
   github: 'https://github.com/arpitsrivastava54',
   linkedin: 'https://www.linkedin.com/in/arpitsrivastava54',
   summary:
-    'Full Stack Engineer with 2 years of hands-on experience building production-grade web applications, AI-powered platforms, and scalable backend systems. Skilled in Next.js, React, Node.js, Fastify, and MongoDB, with deep practical exposure to Generative AI, LLM integrations, real-time systems, and enterprise-scale infrastructure. Experienced in designing end-to-end systems from RBAC dashboards to queue-driven backends and WebSocket-powered real-time features.',
+    'Software engineer and full stack developer with 2 years of hands-on experience building production-grade web applications, AI-powered platforms, and scalable backend systems. Skilled in Next.js, React, Node.js, JavaScript, Python, Fastify, and MongoDB, with deep practical exposure to Generative AI, LLM integrations, real-time systems, and enterprise-scale infrastructure. Experienced in designing end-to-end systems from RBAC dashboards to queue-driven backends and WebSocket-powered real-time features.',
   company: 'MithilaStack',
   companyRole: 'Full Stack Engineer — Remote',
   companyPeriod: 'August 2024 - Present',

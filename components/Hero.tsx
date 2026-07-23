@@ -41,7 +41,7 @@ export function Hero() {
             className="mb-4"
           >
             <span className="font-mono text-accent-primary text-sm font-semibold tracking-widest uppercase">
-              // {profile.name.toUpperCase()}
+              // Software Engineer · Full Stack Developer
             </span>
           </motion.div>
 
@@ -49,10 +49,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-6 bg-gradient-to-r from-text-primary via-accent-primary to-accent-secondary bg-clip-text text-transparent"
+            className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-4 bg-gradient-to-r from-text-primary via-accent-primary to-accent-secondary bg-clip-text text-transparent"
           >
-            Full Stack Engineer <br /> & AI Systems
+            {profile.name}
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="text-xl sm:text-2xl font-semibold text-text-primary mb-6 tracking-tight"
+          >
+            Software Engineer &amp; Full Stack Developer
+          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +69,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-text-secondary max-w-2xl mb-6 leading-relaxed bg-bg-primary/50 backdrop-blur-sm rounded-lg p-2"
           >
-            {profile.headline}
+            {profile.headline} Skilled in React, Node.js, JavaScript, Python, and Next.js.
           </motion.p>
 
           <motion.p
@@ -110,7 +119,7 @@ export function Hero() {
           <Terminal className="relative border border-border-primary !bg-bg-secondary text-left shadow-2xl">
             <TypingAnimation>&gt; whoami</TypingAnimation>
             <AnimatedSpan className="text-accent-primary font-bold" delay={800}>
-              {profile.name}. Full Stack + AI Engineer.
+              {profile.name}. Software Engineer · Full Stack · React · Node · Python.
             </AnimatedSpan>
             <TypingAnimation delay={1500}>&gt; ./load_skills.sh</TypingAnimation>
             <AnimatedSpan className="text-green-500" delay={2500}>
