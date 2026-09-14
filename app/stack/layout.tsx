@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tech Stack | React, Node.js, Python",
-  description:
-    "Tech stack of Arpit Srivastava — software engineer skilled in React, Next.js, Node.js, JavaScript, Python, LLMs, Docker, and AWS.",
-  alternates: { canonical: "/stack" },
+  title: "AI Software Engineer & Full Stack Developer | Arpit Srivastava",
+  description: "Expert AI software engineer and full stack developer specializing in React, Node.js, Python, and LLMs. Building scalable, high-performance web solutions.",
+  alternates: { canonical: "https://itsarpit.dev/stack" },
   openGraph: {
-    title: "Tech Stack | Arpit Srivastava",
-    description:
-      "Frontend, backend, AI, and DevOps tools used by full stack developer Arpit Srivastava.",
-    url: "/stack",
+    title: "AI Software Engineer & Full Stack Developer | Arpit Srivastava",
+    description: "Expert AI software engineer and full stack developer specializing in React, Node.js, Python, and LLMs. Building scalable, high-performance web solutions.",
+    url: "https://itsarpit.dev/stack",
+    siteName: "Portfolio",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Software Engineer & Full Stack Developer | Arpit Srivastava",
+    description: "Expert AI software engineer and full stack developer specializing in React, Node.js, Python, and LLMs.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function StackLayout({
@@ -18,5 +24,25 @@ export default function StackLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Arpit Srivastava Portfolio",
+            "url": "https://itsarpit.dev",
+            "author": {
+              "@type": "Person",
+              "name": "Arpit Srivastava",
+              "jobTitle": "AI Software Engineer"
+            }
+          })
+        }}
+      />
+      {children}
+    </>
+  );
 }

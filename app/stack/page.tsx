@@ -25,7 +25,6 @@ export default function StackPage() {
       <Navigation />
 
       <main className="flex-1 min-h-screen">
-        {/* Header */}
         <section className="pt-32 pb-16 bg-bg-secondary/30 border-b border-border-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
             <motion.div
@@ -37,7 +36,7 @@ export default function StackPage() {
                 // FULL STACK <br /> <span className="text-accent-primary">ECOSYSTEM</span>
               </h1>
               <p className="max-w-xl text-text-secondary text-lg leading-relaxed">
-                An overview of my core technical stack — curated for performance, scalability, and cutting-edge AI integration across production systems at {profile.company}.
+                An overview of my core technical stack — curated for performance, scalability, and cutting-edge AI integration across production systems at {profile.company}. As a senior software engineer and AI engineer, I specialize in building robust, scalable architectures.
               </p>
             </motion.div>
           </div>
@@ -47,6 +46,8 @@ export default function StackPage() {
           <div className="mb-24">
             <TechStackGraph />
           </div>
+
+          <h2 className="text-3xl font-bold font-mono mb-12 text-center">Core Technical Competencies</h2>
 
           <motion.div
             variants={container}
@@ -65,7 +66,7 @@ export default function StackPage() {
                   <div className="p-2.5 rounded-lg bg-bg-tertiary text-accent-primary group-hover:scale-110 transition-transform">
                     <cat.icon size={22} />
                   </div>
-                  <h2 className="text-lg font-bold font-mono tracking-tight">{cat.title}</h2>
+                  <h3 className="text-lg font-bold font-mono tracking-tight">{cat.title}</h3>
                 </div>
 
                 <p className="text-sm text-text-tertiary mb-8 leading-relaxed">
@@ -87,18 +88,17 @@ export default function StackPage() {
           </motion.div>
         </section>
 
-        {/* Footer CTA */}
         <section className="py-32 bg-bg-secondary border-t border-border-primary">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <h2 className="text-2xl font-bold font-mono mb-6 uppercase tracking-tight">Need specific expertise?</h2>
             <p className="text-text-secondary mb-12">
-              I&apos;m always exploring new technologies and adapt to different stacks based on system requirements.
+              I am an AI software engineer and full stack developer available for high-impact projects. Let's discuss your system requirements.
             </p>
             <a
               href="/contact"
               className="px-10 py-4 rounded-full bg-accent-gradient text-white font-medium hover:shadow-xl hover:shadow-accent-primary/20 transition-all"
             >
-              Get In Touch
+              Hire Me for Your Project
             </a>
           </div>
         </section>
@@ -107,10 +107,7 @@ export default function StackPage() {
       <footer className="border-t border-border-primary py-12 bg-bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           <div className="font-mono text-sm text-text-tertiary mb-4">
-            {profile.name} | Tech Stack Visualizer
-          </div>
-          <div className="flex gap-8 text-text-tertiary font-mono text-xs uppercase tracking-widest opacity-60">
-            <span>Full Stack · AI · GenAI</span>
+            {profile.name} | AI Full Stack Developer Portfolio
           </div>
         </div>
       </footer>
