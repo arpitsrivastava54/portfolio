@@ -31,6 +31,11 @@ export default function ProjectsPage() {
               <p className="text-text-secondary text-lg leading-relaxed">
                 Enterprise-grade platforms and SaaS applications engineered for high scale, performance, and impact. Explore the architectural metadata and core tech stacks behind my featured work as an AI software engineer.
               </p>
+              <div className="mt-8">
+                <Link href="/contact" className="inline-block px-6 py-3 bg-accent-primary text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                  Discuss Your Project
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

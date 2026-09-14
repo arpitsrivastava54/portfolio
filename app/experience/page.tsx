@@ -5,20 +5,20 @@ import { profile } from '@/data/profile';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Senior AI Software Engineer Experience | itsarpit.dev",
-  description: "Explore the professional journey of an AI Software Engineer and Full Stack Developer. View expert-level projects, ML systems, and DevOps engineering experience.",
+  title: "Senior AI Software Engineer Experience & Projects | itsarpit",
+  description: "Expert AI Software Engineer & Full Stack Developer. Explore my professional journey, ML systems, DevOps engineering, and scalable software solutions.",
   alternates: { canonical: "https://itsarpit.dev/experience" },
   openGraph: {
-    title: "Senior AI Software Engineer Experience | itsarpit.dev",
-    description: "Explore the professional journey of an AI Software Engineer and Full Stack Developer. View expert-level projects, ML systems, and DevOps engineering experience.",
+    title: "Senior AI Software Engineer Experience & Projects | itsarpit",
+    description: "Expert AI Software Engineer & Full Stack Developer. Explore my professional journey, ML systems, DevOps engineering, and scalable software solutions.",
     url: "https://itsarpit.dev/experience",
     siteName: "Portfolio",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Senior AI Software Engineer Experience | itsarpit.dev",
-    description: "Explore the professional journey of an AI Software Engineer and Full Stack Developer. View expert-level projects, ML systems, and DevOps engineering experience."
+    title: "Senior AI Software Engineer Experience & Projects | itsarpit",
+    description: "Expert AI Software Engineer & Full Stack Developer. Explore my professional journey, ML systems, DevOps engineering, and scalable software solutions."
   },
   robots: { index: true, follow: true }
 };
@@ -32,6 +32,16 @@ export default function ExperiencePage() {
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://itsarpit.dev" }, { "@type": "ListItem", "position": 2, "name": "Experience", "item": "https://itsarpit.dev/experience" }]
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What technologies does this AI Software Engineer specialize in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "I specialize in AI engineering, full-stack development, machine learning systems, and DevOps practices to build scalable software solutions." }
+        }
+      ]
     }
   };
 

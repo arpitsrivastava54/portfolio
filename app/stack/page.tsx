@@ -64,7 +64,7 @@ export default function StackPage() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-2.5 rounded-lg bg-bg-tertiary text-accent-primary group-hover:scale-110 transition-transform">
-                    <cat.icon size={22} />
+                    <cat.icon size={22} aria-hidden="true" />
                   </div>
                   <h3 className="text-lg font-bold font-mono tracking-tight">{cat.title}</h3>
                 </div>
