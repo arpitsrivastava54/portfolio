@@ -2,11 +2,11 @@ import React from 'react';
 
 export const metadata = {
   title: 'AI Software Engineer FAQ | Arpit Srivastava Portfolio',
-  description: 'Get answers about Arpit Srivastava, an AI software engineer and full stack developer. Learn about his expertise in ML, DevOps, and scalable system design.',
+  description: 'Expert answers from Arpit Srivastava, a senior AI software engineer and full stack developer specializing in ML, DevOps, and scalable system design.',
   alternates: { canonical: 'https://itsarpit.dev/faq' },
   openGraph: {
     title: 'AI Software Engineer FAQ | Arpit Srivastava Portfolio',
-    description: 'Get answers about Arpit Srivastava, an AI software engineer and full stack developer. Learn about his expertise in ML, DevOps, and scalable system design.',
+    description: 'Expert answers from Arpit Srivastava, a senior AI software engineer and full stack developer specializing in ML, DevOps, and scalable system design.',
     url: 'https://itsarpit.dev/faq',
     siteName: 'Portfolio',
     type: 'website',
@@ -14,7 +14,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Software Engineer FAQ | Arpit Srivastava Portfolio',
-    description: 'Get answers about Arpit Srivastava, an AI software engineer and full stack developer. Learn about his expertise in ML, DevOps, and scalable system design.'
+    description: 'Expert answers from Arpit Srivastava, a senior AI software engineer and full stack developer specializing in ML, DevOps, and scalable system design.'
   },
   robots: { index: true, follow: true }
 };
@@ -94,7 +94,7 @@ export default function FAQPage() {
       <div className="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-100">
         <h2 className="text-xl font-bold mb-2">Ready to start your project?</h2>
         <p className="mb-4">Hire Arpit for your next AI or software engineering initiative.</p>
-        <a href="/contact" className="px-6 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700">Contact Arpit</a>
+        <a href="/contact" className="px-6 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700">Hire Arpit Srivastava Today</a>
       </div>
     </main>
   );

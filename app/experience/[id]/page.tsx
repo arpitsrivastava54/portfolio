@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const techList = project.tech.slice(0, 4).join(", ");
-  const title = `${project.title} | AI Software Engineer Portfolio`;
-  const description = `Explore ${project.title} case study by ${profile.name}. Expert AI software engineer & full stack developer insights on ${techList}.`;
+  const title = `${project.title} | AI & Full Stack Engineer Portfolio`;
+  const description = `Expert AI software engineer case study: ${project.title}. Insights on ${techList} by Arpit Srivastava. Explore professional AI development projects.`;
 
   return {
     title,
@@ -52,7 +52,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      ...(project.image ? { images: [project.image] } : {}),
     },
     robots: {
       index: true,
@@ -80,8 +79,10 @@ export default async function ExperienceDetailPage({ params }: Props) {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Arpit Srivastava Portfolio"
-            }
+              "name": "Arpit Srivastava Portfolio",
+              "url": "https://itsarpit.dev"
+            },
+            "description": `Case study on ${project?.title} by AI Software Engineer Arpit Srivastava.`
           })
         }}
       />

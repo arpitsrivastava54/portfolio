@@ -39,7 +39,7 @@ export default function ContactPage() {
               <h1 className="text-4xl sm:text-6xl font-bold font-mono tracking-tighter uppercase">// GET IN <span className="text-accent-primary">TOUCH</span></h1>
               <h2 className="text-xl text-text-secondary">Contact an AI Software Engineer for Collaboration</h2>
               <p className="max-w-xl text-text-secondary text-lg leading-relaxed">
-                Looking for an expert AI full stack developer or ML engineer? Reach out to discuss software engineering projects, technical consulting, or freelance opportunities. Our team provides custom AI solutions for enterprise-grade applications.
+                Looking for an expert AI full stack developer or ML engineer? Reach out to discuss software engineering projects, technical consulting, or freelance opportunities. Our team provides custom AI solutions for enterprise-grade applications. Contact us today to start your project.
               </p>
             </motion.div>
           </div>

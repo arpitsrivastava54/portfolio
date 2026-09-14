@@ -26,23 +26,27 @@ export const metadata: Metadata = {
 export default function ExperiencePage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Experience & Projects",
-    "description": "Professional experience as an AI Software Engineer and Full Stack Developer.",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://itsarpit.dev" }, { "@type": "ListItem", "position": 2, "name": "Experience", "item": "https://itsarpit.dev/experience" }]
-    },
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What technologies does this AI Software Engineer specialize in?",
-          "acceptedAnswer": { "@type": "Answer", "text": "I specialize in AI engineering, full-stack development, machine learning systems, and DevOps practices to build scalable software solutions." }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Experience & Projects",
+        "description": "Professional experience as an AI Software Engineer and Full Stack Developer.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://itsarpit.dev" }, { "@type": "ListItem", "position": 2, "name": "Experience", "item": "https://itsarpit.dev/experience" }]
         }
-      ]
-    }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What technologies does this AI Software Engineer specialize in?",
+            "acceptedAnswer": { "@type": "Answer", "text": "I specialize in AI engineering, full-stack development, machine learning systems, and DevOps practices to build scalable software solutions." }
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -56,7 +60,7 @@ export default function ExperiencePage() {
             <p className="text-text-secondary max-w-2xl leading-relaxed mb-6">
               A comprehensive breakdown of my career journey as an AI Software Engineer, detailing the complex problems I have solved and scalable systems I have built using modern ML and DevOps practices.
             </p>
-            <Link href="/contact" className="inline-block bg-accent-primary text-white px-6 py-3 rounded font-mono text-sm hover:opacity-90 transition-opacity">
+            <Link href="/contact" className="inline-block bg-accent-primary text-white px-6 py-3 rounded font-mono text-sm hover:opacity-90 transition-opacity" aria-label="Contact me for AI software engineering projects">
               HIRE ME FOR YOUR PROJECT
             </Link>
           </div>

@@ -38,12 +38,18 @@ export default function StackLayout({
                 "url": "https://itsarpit.dev"
               },
               {
+                "@type": "Organization",
+                "name": "Arpit Srivastava",
+                "url": "https://itsarpit.dev",
+                "description": "Senior AI Software Engineer and Full Stack Developer specializing in ML and DevOps."
+              },
+              {
                 "@type": "FAQPage",
                 "mainEntity": [
                   {
                     "@type": "Question",
                     "name": "What services does Arpit Srivastava offer?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Arpit offers AI engineering, full-stack development, and DevOps consulting services." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Arpit offers AI engineering, full-stack development, and DevOps consulting services for scalable enterprise solutions." }
                   }
                 ]
               }
