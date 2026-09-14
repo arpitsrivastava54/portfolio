@@ -32,7 +32,7 @@ export default function ProjectsPage() {
                 Enterprise-grade platforms and SaaS applications engineered for high scale, performance, and impact. Explore the architectural metadata and core tech stacks behind my featured work as an AI software engineer.
               </p>
               <div className="mt-8">
-                <Link href="/contact" className="inline-block px-6 py-3 bg-accent-primary text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                <Link href="/contact" className="inline-block px-6 py-3 bg-accent-primary text-white font-medium rounded-lg hover:opacity-90 transition-opacity" aria-label="Discuss your software engineering project with me">
                   Discuss Your Project
                 </Link>
               </div>
@@ -54,9 +54,9 @@ export default function ProjectsPage() {
             &copy; {new Date().getFullYear()} {profile.name}. {profile.footerNote}
           </div>
           <div className="flex gap-8 text-text-tertiary">
-            <Link href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest">GITHUB</Link>
-            <Link href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest">LINKEDIN</Link>
-            <Link href={`mailto:${profile.email}`} className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest">EMAIL</Link>
+            <Link href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest" aria-label="Visit GitHub profile">GITHUB</Link>
+            <Link href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest" aria-label="Visit LinkedIn profile">LINKEDIN</Link>
+            <Link href={`mailto:${profile.email}`} className="hover:text-accent-primary transition-colors font-mono text-xs uppercase tracking-widest" aria-label="Send me an email">EMAIL</Link>
           </div>
         </div>
       </footer>

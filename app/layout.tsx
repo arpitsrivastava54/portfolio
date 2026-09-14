@@ -17,7 +17,7 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
-  description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
+  description: "Expert AI Software Engineer & Full Stack Developer. Specializing in Machine Learning, DevOps, and scalable AI-driven web applications for modern enterprises.",
   keywords: ["software engineer", "ai engineer", "ai full stack developer", "ai software engineer", "ml engineer", "devops engineer", "senior software engineer"],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
-    description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
+    description: "Expert AI Software Engineer & Full Stack Developer. Specializing in Machine Learning, DevOps, and scalable AI-driven web applications for modern enterprises.",
     url: siteUrl,
     siteName: `${profile.name} Portfolio`,
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
-    description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
+    description: "Expert AI Software Engineer & Full Stack Developer. Specializing in Machine Learning, DevOps, and scalable AI-driven web applications for modern enterprises.",
     images: ["/og-image.webp"],
   },
   robots: {
@@ -119,6 +119,9 @@ export default function RootLayout({
         geist.variable
       )}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className="min-h-full flex flex-col bg-bg-primary text-text-primary">
         <JsonLd />
         {children}
