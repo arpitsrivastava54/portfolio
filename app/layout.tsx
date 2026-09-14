@@ -2,12 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import {
-  defaultDescription,
-  defaultTitle,
-  getSiteUrl,
-  siteKeywords,
-} from "@/lib/site";
+import { getSiteUrl } from "@/lib/site";
 import { profile } from "@/data/profile";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -21,28 +16,25 @@ const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: defaultTitle,
-    template: "%s | Arpit Srivastava",
-  },
-  description: defaultDescription,
-  keywords: [...siteKeywords],
+  title: "Arpit Srivastava | AI Software & Full Stack Engineer",
+  description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
+  keywords: ["software engineer", "ai engineer", "ai full stack developer", "ai software engineer", "ml engineer", "devops engineer", "senior software engineer"],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
   alternates: {
-    canonical: "/",
+    canonical: "https://itsarpit.dev",
   },
   openGraph: {
-    title: defaultTitle,
-    description: defaultDescription,
+    title: "Arpit Srivastava | AI Software & Full Stack Engineer",
+    description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
     url: siteUrl,
     siteName: `${profile.name} Portfolio`,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: `${profile.name} — Software Engineer & Full Stack Developer`,
+        alt: "Arpit Srivastava AI Software Engineer Portfolio",
       },
     ],
     locale: "en_US",
@@ -50,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: defaultTitle,
-    description: defaultDescription,
-    images: ["/og-image.png"],
+    title: "Arpit Srivastava | AI Software & Full Stack Engineer",
+    description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,
@@ -76,37 +68,19 @@ function JsonLd() {
       {
         "@type": "Person",
         "@id": personId,
-        name: profile.name,
-        url: siteUrl,
-        email: profile.email,
-        jobTitle: "Software Engineer / Full Stack Developer",
-        worksFor: {
-          "@type": "Organization",
-          name: profile.company,
-        },
-        sameAs: [profile.github, profile.linkedin],
-        knowsAbout: [
-          "Software Engineering",
-          "Full Stack Development",
-          "React",
-          "Next.js",
-          "Node.js",
-          "JavaScript",
-          "Python",
-          "Generative AI",
-          "LLMs",
-        ],
-        description: profile.summary,
+        "name": profile.name,
+        "url": siteUrl,
+        "jobTitle": "Senior AI Software Engineer",
+        "sameAs": [profile.github, profile.linkedin],
+        "description": "Expert AI software engineer and full stack developer."
       },
       {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
-        url: siteUrl,
-        name: `${profile.name} Portfolio`,
-        description: defaultDescription,
-        author: { "@id": personId },
-        inLanguage: "en-US",
-      },
+        "url": siteUrl,
+        "name": `${profile.name} Portfolio`,
+        "author": { "@id": personId }
+      }
     ],
   };
 
