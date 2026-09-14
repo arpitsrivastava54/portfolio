@@ -28,6 +28,7 @@ export function ExperienceDetailClient({ id }: { id: string }) {
   return (
     <>
       <Navigation />
+  <Link href="/faq">FAQ</Link>
 
       <main className="flex-1 min-h-screen pb-24">
         {/* Header */}

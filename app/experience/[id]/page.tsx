@@ -22,26 +22,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const techList = project.tech.slice(0, 4).join(", ");
-  const title = `${project.title} | ${project.role}`;
-  const description = `${project.shortDescription} — case study by ${profile.name}, software engineer. Built with ${techList}.`;
+  const title = `${project.title} | AI Software Engineer Portfolio`;
+  const description = `Explore ${project.title} case study by ${profile.name}. Expert AI software engineer & full stack developer insights on ${techList}.`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/experience/${project.id}`,
+      canonical: `https://itsarpit.dev/experience/${project.id}`,
     },
     openGraph: {
-      title: `${project.title} | ${profile.name}`,
+      title,
       description,
-      url: `/experience/${project.id}`,
+      url: `https://itsarpit.dev/experience/${project.id}`,
+      siteName: "Arpit Srivastava Portfolio",
       type: "article",
       ...(project.image
         ? {
             images: [
               {
                 url: project.image,
-                alt: `${project.title} — ${techList} project by ${profile.name}`,
+                alt: `${project.title} project case study by Arpit Srivastava`,
               },
             ],
           }
@@ -49,14 +50,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | ${profile.name}`,
+      title,
       description,
       ...(project.image ? { images: [project.image] } : {}),
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
 
 export default async function ExperienceDetailPage({ params }: Props) {
   const { id } = await params;
-  return <ExperienceDetailClient id={id} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Experience Detail",
+            "author": {
+              "@type": "Person",
+              "name": "Arpit Srivastava"
+            }
+          })
+        }}
+      />
+      <ExperienceDetailClient id={id} />
+    </>
+  );
 }
