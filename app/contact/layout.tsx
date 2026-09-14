@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Arpit Srivastava | AI & Full Stack Engineer",
-  description: "Get in touch with Arpit Srivastava, a senior AI software engineer and full stack developer. Available for consulting, AI projects, and technical collaboration.",
+  title: "Contact AI Software Engineer Arpit Srivastava | Hire Expert",
+  description: "Contact Arpit Srivastava, a Senior AI Full Stack Engineer. Reach out for AI consulting, machine learning projects, and expert software development services.",
   alternates: { canonical: "https://itsarpit.dev/contact" },
   openGraph: {
-    title: "Contact Arpit Srivastava | AI & Full Stack Engineer",
-    description: "Get in touch with Arpit Srivastava, a senior AI software engineer and full stack developer. Available for consulting, AI projects, and technical collaboration.",
+    title: "Contact AI Software Engineer Arpit Srivastava | Hire Expert",
+    description: "Contact Arpit Srivastava, a Senior AI Full Stack Engineer. Reach out for AI consulting, machine learning projects, and expert software development services.",
     url: "https://itsarpit.dev/contact",
     siteName: "Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Arpit Srivastava | AI & Full Stack Engineer",
-    description: "Get in touch with Arpit Srivastava, a senior AI software engineer and full stack developer. Available for consulting, AI projects, and technical collaboration.",
+    title: "Contact AI Software Engineer Arpit Srivastava | Hire Expert",
+    description: "Contact Arpit Srivastava, a Senior AI Full Stack Engineer. Reach out for AI consulting, machine learning projects, and expert software development services.",
   },
   robots: { index: true, follow: true },
 };
@@ -31,14 +31,31 @@ export default function ContactLayout({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contact Arpit Srivastava",
-            "description": "Contact page for AI and Full Stack Software Engineer Arpit Srivastava.",
-            "mainEntity": {
-              "@type": "Person",
-              "name": "Arpit Srivastava",
-              "jobTitle": "AI Software Engineer"
-            }
+            "@graph": [
+              {
+                "@type": "ContactPage",
+                "name": "Contact Arpit Srivastava",
+                "description": "Contact page for AI and Full Stack Software Engineer Arpit Srivastava.",
+                "mainEntity": {
+                  "@type": "Person",
+                  "name": "Arpit Srivastava",
+                  "jobTitle": "AI Software Engineer"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What services does Arpit Srivastava offer?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Arpit specializes in AI engineering, full-stack development, machine learning, and DevOps solutions for scalable enterprise applications."
+                    }
+                  }
+                ]
+              }
+            ]
           }),
         }}
       />
