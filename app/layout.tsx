@@ -16,8 +16,8 @@ const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Arpit Srivastava | AI Software & Full Stack Engineer",
-  description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
+  title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
+  description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
   keywords: ["software engineer", "ai engineer", "ai full stack developer", "ai software engineer", "ml engineer", "devops engineer", "senior software engineer"],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     canonical: "https://itsarpit.dev",
   },
   openGraph: {
-    title: "Arpit Srivastava | AI Software & Full Stack Engineer",
-    description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
+    title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
+    description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
     url: siteUrl,
     siteName: `${profile.name} Portfolio`,
     images: [
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arpit Srivastava | AI Software & Full Stack Engineer",
-    description: "Expert AI software engineer and full stack developer specializing in machine learning, DevOps, and scalable web applications. Explore my professional portfolio.",
+    title: "Arpit Srivastava | Senior AI & Full Stack Software Engineer",
+    description: "Hire Arpit Srivastava, a senior AI software engineer and full stack developer. Expert in machine learning, DevOps, and scalable AI-driven web applications.",
     images: ["/og-image.webp"],
   },
   robots: {
@@ -72,7 +72,7 @@ function JsonLd() {
         "url": siteUrl,
         "jobTitle": "Senior AI Software Engineer",
         "sameAs": [profile.github, profile.linkedin],
-        "description": "Expert AI software engineer and full stack developer."
+        "description": "Expert AI software engineer and full stack developer specializing in ML and DevOps."
       },
       {
         "@type": "WebSite",
@@ -80,6 +80,16 @@ function JsonLd() {
         "url": siteUrl,
         "name": `${profile.name} Portfolio`,
         "author": { "@id": personId }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does Arpit Srivastava provide?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Arpit provides expert AI software engineering, full stack development, machine learning integration, and DevOps consulting services." }
+          }
+        ]
       }
     ],
   };

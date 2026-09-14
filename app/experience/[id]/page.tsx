@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ExperienceDetailPage({ params }: Props) {
   const { id } = await params;
+  const project = experiences.find((p) => p.id === id);
   return (
     <>
       <script
@@ -71,10 +72,15 @@ export default async function ExperienceDetailPage({ params }: Props) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Experience Detail",
+            "headline": project?.title || "Experience Detail",
             "author": {
               "@type": "Person",
-              "name": "Arpit Srivastava"
+              "name": "Arpit Srivastava",
+              "url": "https://itsarpit.dev"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Arpit Srivastava Portfolio"
             }
           })
         }}
